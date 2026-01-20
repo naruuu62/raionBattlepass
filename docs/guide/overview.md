@@ -248,15 +248,14 @@ POST /songs/upload
 x-auth-token: TOKEN_KAMU
 ```
 
-**Request Body**
-
-```Content-Type: multipart/form-data
-{
+**Request Body**  
+**Content-Type:** multipart/form-data
+```
 song: [File - example: song.mp3, audio/mpeg]
 thumbnail: [File - example: cover.jpg, image/jpeg]
 artist: LANY
 title: ILYSB
-}
+
 ```
 
 **Response Body**
