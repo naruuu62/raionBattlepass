@@ -1,4 +1,4 @@
-# Halo para calon developer! 👋
+# Halo para calon developer! 
   
 Selamat datang di **RAION Community Battlepass**   
 
@@ -69,7 +69,7 @@ Semua endpoint sudah tersedia di backend, jadi tugas kalian adalah **mengintegra
   `GET /songs/getall`
 
 - **Get User Song**  
-  Menampilkan daftar lagu yang diupload user 
+  Menampilkan daftar lagu yang diupload user   
   `GET /songs/me`
 
 - **Update Song**  
@@ -77,7 +77,7 @@ Semua endpoint sudah tersedia di backend, jadi tugas kalian adalah **mengintegra
   `PUT /songs/update/{song_id}`
 
 - **Delete Song**  
-  Menghapus lagu
+  Menghapus lagu  
   `DELETE /songs/delete/{song_id}`
 
 ---
@@ -86,9 +86,9 @@ Semua endpoint sudah tersedia di backend, jadi tugas kalian adalah **mengintegra
 ## Desain Tidak Perlu Ribet
 UI **Ga harus yang heboh banget**.  
 Yang penting:
+- Mengimplementasikan semua endpoint API
+- Aplikasi berjalan sesuai ketentuan
 - Memutar lagu **di aplikasi**
-- Autentikasi berfungsi dengan baik (login & signup)
-- Mengambil data melalui API (getAll)
 
  **Bonus poin** kalau UI/UX kalian rapi dan enak dipakai.
 
@@ -97,7 +97,7 @@ Yang penting:
 ## BONUS POIN
 Nilai tambahan untuk kalian yang:
 
-- Menampilkan keseluruhan atribut 
+- Menyimpan data dari API ke database lokal (contoh: pakai Room di Android atau SQLite di Flutter/React Native).
 - Menulis kode yang **clean & readable**
 - Membuat **unit test** (minimal 1 endpoint)
 
