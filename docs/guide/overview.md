@@ -43,7 +43,7 @@ POST /auth/signup
 ```json
 {
   "name": "User",
-  "email": "user@mail.com",
+  "email": "user@gmail.com",
   "password": "password123"
 }
 ```
@@ -51,7 +51,11 @@ POST /auth/signup
 **Response Body**
 
 ```json
-ISI DISINI NANTI TIAN
+{
+  "id": "xxxx-12xx-3xxxx-xxx3",
+  "name": "User",
+  "email": "user@gmail.com"
+}
 ```
 
 ---
@@ -66,10 +70,26 @@ Login akan menghasilkan **access token**.
 POST /auth/login
 ```
 
+**Request Body**
+
+```json
+{
+  "email": "user@gmail.com",
+  "password": "password123"
+}
+```
+
 **Response Body**
 
 ```json
-ISI DISINI NANTI TIAN
+{
+  "token": "TOKEN_KAMU",
+  "user": {
+    "id": "xxxx-12xx-3xxxx-xxx3",
+    "name": "User",
+    "email": "user@gmail.com"
+  }
+}
 ```
 
 **Simpan token ini**  
@@ -78,7 +98,7 @@ Token akan digunakan untuk beberapa request selanjutnya. Informasinya bisa kamu 
 
 ### 3. Menggunakan Token
 
-Setelah kamu login, kamu akan memperoleh JWT token yang digunakan sebagai verifikasi pada beberapa request selanjutnya (kecuali endpoint **songs/me**). Jadi simpan baik-baik ya ini di aplikasi kamu (clue: Storage)
+Setelah kamu login, kamu akan memperoleh JWT token yang digunakan sebagai verifikasi pada beberapa request selanjutnya (kecuali endpoint **songs/getall**). Jadi simpan baik-baik ya ini di aplikasi kamu (clue: Storage)
 
 ```
 Authorization: x-auth-token TOKEN_KAMU
@@ -104,9 +124,9 @@ x-auth-token: TOKEN_KAMU
 
 ```json
 {
-  "id": "id_user",
-  "name": "NAMA_KAMU",
-  "email": "EMAIL_KAMU"
+  "id": "xxxx-12xx-3xxxx-xxx3",
+  "name": "User",
+  "email": "user@gmail.com"
 }
 ```
 
@@ -133,7 +153,14 @@ x-auth-token: TOKEN_KAMU
 **Response Body**
 
 ```json
-ISI DISINI NANTI TIAN
+{
+"song_url": "http://...",
+"artist": "7!!",
+"user_id": "xxxx-12xx-3xxxx-xxx3",
+"id": "xxxx1xxx23xx",
+"thumbnail_url": "http://...",
+"title": "Orange"
+}
 ```
 
 ---
@@ -160,13 +187,23 @@ x-auth-token: TOKEN_KAMU
 **Request Body**
 
 ```json
-ISI DISINI NANTI TIAN
+{
+  "title": "Orange Juice",
+  "artist": "9!!"
+}
 ```
 
 **Response Body**
 
 ```json
-ISI DISINI NANTI TIAN
+{
+"song_url": "http://...",
+"artist": "9!!",
+"user_id": "xxxx-12xx-3xxxx-xxx3",
+"id": "xxxx1xxx23xx",
+"thumbnail_url": "http://...",
+"title": "Orange Juice"
+}
 ```
 
 ---
@@ -187,16 +224,10 @@ DELETE /songs/delete/{song_id}
 x-auth-token: TOKEN_KAMU
 ```
 
-**Request Body**
-
-```json
-ISI DISINI NANTI TIAN
-```
-
 **Response Body**
 
 ```json
-ISI DISINI NANTI TIAN
+{"message":"Song deleted succesfully", "song_id":"xxxx1xxx23xx"}
 ```
 
 ---
@@ -219,14 +250,26 @@ x-auth-token: TOKEN_KAMU
 
 **Request Body**
 
-```json
-ISI DISINI NANTI TIAN
+```Content-Type: multipart/form-data
+{
+song: [File - example: song.mp3, audio/mpeg]
+thumbnail: [File - example: cover.jpg, image/jpeg]
+artist: LANY
+title: ILYSB
+}
 ```
 
 **Response Body**
 
 ```json
-ISI DISINI NANTI TIAN
+{
+"song_url": "http://...",
+"artist": "7!!",
+"user_id": "xxxx-12xx-3xxxx-xxx3",
+"id": "xxxx1xxx23xx",
+"thumbnail_url": "http://...",
+"title": "Orange"
+}
 ```
 
 ---
@@ -241,16 +284,17 @@ Mendapatkan seluruh data lagu yang ada di database.
 GET /songs/getall
 ```
 
-**Request Body**
-
-```json
-ISI DISINI NANTI TIAN
-```
-
 **Response Body**
 
 ```json
-ISI DISINI NANTI TIAN
+{
+"song_url": "http://...",
+"artist": "9!!",
+"user_id": "xxxx-12xx-3xxxx-xxx3",
+"id": "xxxx1xxx23xx",
+"thumbnail_url": "http://...",
+"title": "Orange Juice"
+}
 ```
 
 ## Contoh Implementasi
