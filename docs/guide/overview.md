@@ -154,12 +154,12 @@ x-auth-token: TOKEN_KAMU
 
 ```json
 {
-"song_url": "http://...",
-"artist": "7!!",
-"user_id": "xxxx-12xx-3xxxx-xxx3",
-"id": "xxxx1xxx23xx",
-"thumbnail_url": "http://...",
-"title": "Orange"
+  "song_url": "http://...",
+  "artist": "7!!",
+  "user_id": "xxxx-12xx-3xxxx-xxx3",
+  "id": "xxxx1xxx23xx",
+  "thumbnail_url": "http://...",
+  "title": "Orange"
 }
 ```
 
@@ -197,12 +197,12 @@ x-auth-token: TOKEN_KAMU
 
 ```json
 {
-"song_url": "http://...",
-"artist": "9!!",
-"user_id": "xxxx-12xx-3xxxx-xxx3",
-"id": "xxxx1xxx23xx",
-"thumbnail_url": "http://...",
-"title": "Orange Juice"
+  "song_url": "http://...",
+  "artist": "9!!",
+  "user_id": "xxxx-12xx-3xxxx-xxx3",
+  "id": "xxxx1xxx23xx",
+  "thumbnail_url": "http://...",
+  "title": "Orange Juice"
 }
 ```
 
@@ -227,7 +227,7 @@ x-auth-token: TOKEN_KAMU
 **Response Body**
 
 ```json
-{"message":"Song deleted succesfully", "song_id":"xxxx1xxx23xx"}
+{ "message": "Song deleted succesfully", "song_id": "xxxx1xxx23xx" }
 ```
 
 ---
@@ -235,6 +235,11 @@ x-auth-token: TOKEN_KAMU
 ### 4. Upload Song
 
 Mengunggah lagu dengan datanya ke database
+
+**Ketentuan File**
+
+- Ukuran file audio dan gambar maksimal 10 MB.
+- Disarankan untuk mengunggah dalam format .mp3 untuk audio dan .jpg untuk gambar.
 
 **Endpoint**
 
@@ -250,11 +255,12 @@ x-auth-token: TOKEN_KAMU
 
 **Request Body**  
 **Content-Type:** multipart/form-data
+
 ```
-song: [File - example: song.mp3, audio/mpeg]
-thumbnail: [File - example: cover.jpg, image/jpeg]
-artist: LANY
-title: ILYSB
+song: [File - example: song.mp3]
+thumbnail: [File - example: cover.jpg]
+artist: [String Form - example: LANY]
+title: [String Form - example: ILYSB]
 
 ```
 
@@ -262,12 +268,12 @@ title: ILYSB
 
 ```json
 {
-"song_url": "http://...",
-"artist": "7!!",
-"user_id": "xxxx-12xx-3xxxx-xxx3",
-"id": "xxxx1xxx23xx",
-"thumbnail_url": "http://...",
-"title": "Orange"
+  "song_url": "http://...",
+  "artist": "7!!",
+  "user_id": "xxxx-12xx-3xxxx-xxx3",
+  "id": "xxxx1xxx23xx",
+  "thumbnail_url": "http://...",
+  "title": "Orange"
 }
 ```
 
@@ -287,12 +293,12 @@ GET /songs/getall
 
 ```json
 {
-"song_url": "http://...",
-"artist": "9!!",
-"user_id": "xxxx-12xx-3xxxx-xxx3",
-"id": "xxxx1xxx23xx",
-"thumbnail_url": "http://...",
-"title": "Orange Juice"
+  "song_url": "http://...",
+  "artist": "9!!",
+  "user_id": "xxxx-12xx-3xxxx-xxx3",
+  "id": "xxxx1xxx23xx",
+  "thumbnail_url": "http://...",
+  "title": "Orange Juice"
 }
 ```
 
