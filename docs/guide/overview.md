@@ -75,7 +75,10 @@ POST /auth/login
 }
 ```
 
-Token dapat dilihat menggunakan
+ **Simpan token ini**       
+Token akan digunakan untuk semua request selanjutnya.
+
+### 3 Menampilkan Data User
 **Endpoint**
 
 ```
@@ -86,16 +89,15 @@ GET /auth/
 
 ```json
 {
-  "x-auth-token": "TOKEN_KAMU",
+  "id": "id_user",
+  "name": "NAMA_KAMU",
+  "email": "EMAIL_KAMU"
 }
 ```
 
- **Simpan token ini**       
-Token akan digunakan untuk semua request selanjutnya.
-
 ---
 
-### 3️ Menggunakan Token
+### 4 Menggunakan Token
 
 Tambahkan header berikut di setiap request:
 
