@@ -150,7 +150,7 @@ Jadi, meskipun aplikasi frontend (seperti di handphone) dan backend (seperti ser
 
 Kirim hasil karya kalian melalui form berikut:
 
-**Form Pengumpulan Battlepass**
+[**Form Pengumpulan Battlepass**](https://docs.google.com/forms/d/e/1FAIpQLSd4zf3vlxLl9a5EeUaN8CWPVkVRnAP0_7jJt7M4_06QUbDe6Q/viewform)
 
 ### Bentuk Pengumpulan
 
