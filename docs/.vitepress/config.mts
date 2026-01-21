@@ -13,7 +13,7 @@ export default defineConfig({
 
 
     socialLinks: [
-      { icon: 'github', link: 'https://github.com/alHerys/Music-App-Server.git' }
+      { icon: 'github', link: 'https://github.com/naruuu62/raion-battlepass-2026.git' }
     ]
   }
 })
